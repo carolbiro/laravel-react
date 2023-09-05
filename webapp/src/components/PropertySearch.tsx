@@ -106,7 +106,9 @@ const PropertySearch = () => {
         ) : (
         <div className="search-results">
           <h3>Search Results</h3>
-          <table>
+          {searchResults.length === 0 ? (
+            <div>No Results Found.</div>
+          ) : (          <table>
             <thead>
               <tr>
                 <th>Name</th>
@@ -129,7 +131,8 @@ const PropertySearch = () => {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table>)}
+
         </div>)
       }
     </div>
